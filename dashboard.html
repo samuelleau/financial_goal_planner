@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - FinGoal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>FinGoal</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="chat.html" class="nav-link">AI Chat</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="education.html" class="nav-link">Learn</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="dashboard">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h1>Your Financial Dashboard</h1>
+                    <p>Track your progress and manage your financial goals</p>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="totalSavings">$0</h3>
+                            <p>Total Savings</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-target"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="activeGoals">0</h3>
+                            <p>Active Goals</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="monthlyProgress">0%</h3>
+                            <p>Monthly Progress</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="completedGoals">0</h3>
+                            <p>Goals Completed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Dashboard Container -->
+                <div class="unified-dashboard-container">
+                    <!-- Left Column: Financial Goals -->
+                    <div class="dashboard-section goals-section">
+                        <div class="section-header">
+                            <h3><i class="fas fa-bullseye"></i> Financial Goals</h3>
+                            <button id="addGoalBtn" class="btn btn-primary btn-sm">
+                                <i class="fas fa-plus"></i> Add Goal
+                            </button>
+                        </div>
+                        <div id="goalsList" class="enhanced-goals-list">
+                            <!-- Enhanced goals will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Budget, Activity & Insights -->
+                    <div class="dashboard-section info-section">
+                        <!-- Monthly Budget -->
+                        <div class="info-card budget-card">
+                            <div class="card-header">
+                                <h4><i class="fas fa-calculator"></i> Monthly Budget</h4>
+                                <button id="editBudgetBtn" class="btn btn-secondary btn-sm">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                            </div>
+                            <div class="budget-overview">
+                                <div class="budget-item">
+                                    <span class="budget-category">Income</span>
+                                    <span class="budget-amount" id="monthlyIncome">$0</span>
+                                </div>
+                                <div class="budget-item">
+                                    <span class="budget-category">Expenses</span>
+                                    <span class="budget-amount" id="monthlyExpenses">$0</span>
+                                </div>
+                                <div class="budget-item">
+                                    <span class="budget-category">Savings</span>
+                                    <span class="budget-amount" id="monthlySavings">$0</span>
+                                </div>
+                                <div class="budget-progress">
+                                    <div class="budget-bar">
+                                        <div class="budget-fill" id="budgetFill"></div>
+                                    </div>
+                                    <span class="budget-percentage" id="budgetPercentage">0%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity -->
+                        <div class="info-card activity-card">
+                            <h4><i class="fas fa-history"></i> Recent Activity</h4>
+                            <div id="recentActivity" class="activity-list">
+                                <!-- Activity will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <!-- AI Insights -->
+                        <div class="info-card insights-card">
+                            <h4><i class="fas fa-lightbulb"></i> AI Insights</h4>
+                            <div id="aiInsights" class="insights-list">
+                                <div class="insight-item">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p>You're on track to reach your emergency fund goal 2 months early! Consider increasing your investment contributions.</p>
+                                </div>
+                                <div class="insight-item">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <p>Your dining out expenses are 15% higher than last month. Consider meal prepping to save money.</p>
+                                </div>
+                                <div class="insight-item">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <p>Great job maintaining your budget for 3 consecutive months! You've saved an extra $450.</p>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-sm" onclick="window.location.href='chat.html'">
+                                <i class="fas fa-robot"></i> Get More Insights
+                            </button>
+                        </div>
+
+                        <!-- AI Setup -->
+                        <div class="info-card ai-setup-card">
+                            <h4><i class="fas fa-robot"></i> AI Step Generation</h4>
+                            <div id="apiKeyStatus" class="api-status">
+                                <div class="status-indicator">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <span>OpenAI API key not configured</span>
+                                </div>
+                                <p>Set up your OpenAI API key to get personalized, AI-generated steps for your financial goals.</p>
+                            </div>
+                            <button class="btn btn-primary btn-sm" id="setupApiKeyBtn">
+                                <i class="fas fa-key"></i> Setup API Key
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Goal Modal -->
+    <div id="addGoalModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-plus"></i> Add New Financial Goal</h3>
+                <button class="close-btn" id="closeGoalModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="goalForm">
+                    <div class="form-group">
+                        <label for="goalName" class="form-label">Goal Name</label>
+                        <input type="text" id="goalName" class="form-input" placeholder="e.g., Emergency Fund" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="goalAmount" class="form-label">Target Amount ($)</label>
+                        <input type="number" id="goalAmount" class="form-input" placeholder="5000" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="currentAmount" class="form-label">Current Amount ($)</label>
+                        <input type="number" id="currentAmount" class="form-input" placeholder="0" min="0" value="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="goalDeadline" class="form-label">Target Date</label>
+                        <input type="date" id="goalDeadline" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="goalCategory" class="form-label">Category</label>
+                        <select id="goalCategory" class="form-select" required>
+                            <option value="">Select Category</option>
+                            <option value="emergency">Emergency Fund</option>
+                            <option value="debt">Debt Payoff</option>
+                            <option value="investment">Investment</option>
+                            <option value="house">House Down Payment</option>
+                            <option value="car">Car Purchase</option>
+                            <option value="vacation">Vacation</option>
+                            <option value="education">Education</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="submit" class="btn btn-primary">Create Goal</button>
+                        <button type="button" class="btn btn-secondary" id="cancelGoal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Budget Modal -->
+    <div id="editBudgetModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-edit"></i> Edit Monthly Budget</h3>
+                <button class="close-btn" id="closeBudgetModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="budgetForm">
+                    <div class="form-group">
+                        <label for="budgetIncome" class="form-label">Monthly Income ($)</label>
+                        <input type="number" id="budgetIncome" class="form-input" placeholder="3000" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="budgetExpenses" class="form-label">Monthly Expenses ($)</label>
+                        <input type="number" id="budgetExpenses" class="form-input" placeholder="2400" min="0" required>
+                    </div>
+                    <div class="modal-actions">
+                        <button type="submit" class="btn btn-primary">Update Budget</button>
+                        <button type="button" class="btn btn-secondary" id="cancelBudget">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Key Setup Modal -->
+    <div id="apiKeyModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-key"></i> Setup OpenAI API Key</h3>
+                <button class="close-btn" id="closeApiKeyModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Enter your OpenAI API key to enable AI-generated personalized steps for your financial goals.</p>
+                <div class="form-group">
+                    <label for="apiKeyInput" class="form-label">OpenAI API Key</label>
+                    <input type="password" id="apiKeyInput" class="form-input" placeholder="sk-..." required>
+                    <small style="color: #718096; margin-top: 0.5rem; display: block;">
+                        Your API key is stored locally and never sent to external servers except OpenAI.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <p style="font-size: 0.9rem; color: #4a5568; line-height: 1.5;">
+                        <strong>How to get your API key:</strong><br>
+                        1. Visit <a href="https://platform.openai.com/api-keys" target="_blank" style="color: #667eea;">OpenAI Platform</a><br>
+                        2. Sign in or create an account<br>
+                        3. Click "Create new secret key"<br>
+                        4. Copy and paste the key here
+                    </p>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-primary" id="saveApiKey">Save API Key</button>
+                    <button type="button" class="btn btn-secondary" id="cancelApiKey">Cancel</button>
+                    <button type="button" class="btn btn-secondary" id="removeApiKey" style="display: none;">Remove Key</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FinGoal. Empowering Gen Z's Financial Future.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/dashboard.js"></script>
+</body>
+</html>

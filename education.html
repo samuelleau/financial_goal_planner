@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Education - FinGoal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>FinGoal</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="chat.html" class="nav-link">AI Chat</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="education.html" class="nav-link active">Learn</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="education-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Master Your <span class="gradient-text">Financial Future</span></h1>
+                    <p>Learn essential wealth management strategies designed specifically for YOU. Build your foundation for long-term financial success.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="education-content">
+            <div class="container">
+                <!-- Quick Navigation -->
+                <div class="education-nav">
+                    <button class="edu-nav-btn active" data-section="basics">💰 Basics</button>
+                    <button class="edu-nav-btn" data-section="budgeting">📊 Budgeting</button>
+                    <button class="edu-nav-btn" data-section="investing">📈 Investing</button>
+                    <button class="edu-nav-btn" data-section="debt">💳 Debt Management</button>
+                    <button class="edu-nav-btn" data-section="advanced">🚀 Advanced</button>
+                </div>
+
+                <!-- Basics Section -->
+                <div class="education-section active" id="basics">
+                    <h2><i class="fas fa-graduation-cap"></i> Financial Basics for Gen Z</h2>
+                    
+                    <div class="lesson-grid">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-piggy-bank"></i>
+                            </div>
+                            <h3>Emergency Fund</h3>
+                            <p>Your financial safety net - aim for 3-6 months of expenses</p>
+                            <div class="lesson-steps">
+                                <h4>Steps to Build:</h4>
+                                <ol>
+                                    <li>Calculate monthly expenses</li>
+                                    <li>Set initial goal of $1,000</li>
+                                    <li>Automate $50-100/month savings</li>
+                                    <li>Keep in high-yield savings account</li>
+                                    <li>Gradually increase to 3-6 months</li>
+                                </ol>
+                            </div>
+                            <div class="lesson-tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Start small - even $25/week adds up to $1,300/year!</span>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <h3>Building Credit</h3>
+                            <p>Establish good credit early for better financial opportunities</p>
+                            <div class="lesson-steps">
+                                <h4>Credit Building Strategy:</h4>
+                                <ol>
+                                    <li>Get a student or secured credit card</li>
+                                    <li>Keep utilization below 30% (ideally under 10%)</li>
+                                    <li>Pay full balance every month</li>
+                                    <li>Never miss payment due dates</li>
+                                    <li>Monitor credit score monthly</li>
+                                </ol>
+                            </div>
+                            <div class="lesson-tip">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Set up autopay for minimum payments to never miss a due date!</span>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h3>The 50/30/20 Rule</h3>
+                            <p>Simple budgeting framework for balanced financial health</p>
+                            <div class="lesson-breakdown">
+                                <div class="breakdown-item">
+                                    <span class="percentage">50%</span>
+                                    <span class="category">Needs</span>
+                                    <span class="description">Rent, groceries, utilities, minimum debt payments</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="percentage">30%</span>
+                                    <span class="category">Wants</span>
+                                    <span class="description">Entertainment, dining out, hobbies, subscriptions</span>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span class="percentage">20%</span>
+                                    <span class="category">Savings & Debt</span>
+                                    <span class="description">Emergency fund, investments, extra debt payments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Budgeting Section -->
+                <div class="education-section" id="budgeting">
+                    <h2><i class="fas fa-calculator"></i> Smart Budgeting Strategies</h2>
+                    
+                    <div class="lesson-grid">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Digital Budgeting Tools</h3>
+                            <p>Leverage technology to track and manage your money</p>
+                            <div class="tool-list">
+                                <div class="tool-item">
+                                    <strong>Mint:</strong> Free comprehensive budgeting and tracking
+                                </div>
+                                <div class="tool-item">
+                                    <strong>YNAB:</strong> Zero-based budgeting methodology
+                                </div>
+                                <div class="tool-item">
+                                    <strong>PocketGuard:</strong> Simple spending limits tracking
+                                </div>
+                                <div class="tool-item">
+                                    <strong>Bank Apps:</strong> Built-in categorization and alerts
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h3>Irregular Income Budgeting</h3>
+                            <p>Perfect for gig workers, freelancers, and part-time jobs</p>
+                            <div class="lesson-steps">
+                                <h4>Strategy:</h4>
+                                <ol>
+                                    <li>Calculate lowest monthly income from past 6 months</li>
+                                    <li>Budget based on this minimum amount</li>
+                                    <li>Treat extra income as "bonus" for goals</li>
+                                    <li>Build larger emergency fund (6+ months)</li>
+                                    <li>Use percentage-based budgeting</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h3>Gen Z Money Saving Hacks</h3>
+                            <p>Modern ways to cut expenses without sacrificing lifestyle</p>
+                            <div class="hack-list">
+                                <div class="hack-item">
+                                    <i class="fas fa-utensils"></i>
+                                    <span><strong>Meal Prep Sundays:</strong> Save $200+/month on food</span>
+                                </div>
+                                <div class="hack-item">
+                                    <i class="fas fa-tv"></i>
+                                    <span><strong>Subscription Audit:</strong> Cancel unused services quarterly</span>
+                                </div>
+                                <div class="hack-item">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span><strong>Cashback Apps:</strong> Rakuten, Honey, Ibotta for purchases</span>
+                                </div>
+                                <div class="hack-item">
+                                    <i class="fas fa-car"></i>
+                                    <span><strong>Transportation:</strong> Public transit, bike, carpool apps</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Investing Section -->
+                <div class="education-section" id="investing">
+                    <h2><i class="fas fa-chart-line"></i> Investing for Beginners</h2>
+                    
+                    <div class="lesson-grid">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3>Start Investing Early</h3>
+                            <p>Time is your biggest advantage - compound interest is magic</p>
+                            <div class="compound-example">
+                                <h4>The Power of Starting Early:</h4>
+                                <div class="example-comparison">
+                                    <div class="comparison-item">
+                                        <strong>Start at 22:</strong> $100/month → $1.37M by 65
+                                    </div>
+                                    <div class="comparison-item">
+                                        <strong>Start at 32:</strong> $100/month → $610K by 65
+                                    </div>
+                                </div>
+                                <p class="example-note">Assuming 7% annual return - starting 10 years earlier more than doubles your wealth!</p>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3>Investment Account Types</h3>
+                            <p>Choose the right accounts for your goals</p>
+                            <div class="account-types">
+                                <div class="account-item">
+                                    <strong>401(k):</strong> Employer-sponsored, get the match!
+                                </div>
+                                <div class="account-item">
+                                    <strong>Roth IRA:</strong> Tax-free growth, withdraw contributions anytime
+                                </div>
+                                <div class="account-item">
+                                    <strong>Traditional IRA:</strong> Tax deduction now, pay taxes later
+                                </div>
+                                <div class="account-item">
+                                    <strong>Taxable Account:</strong> No restrictions, more flexibility
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h3>Simple Portfolio Strategy</h3>
+                            <p>Low-cost, diversified investing for beginners</p>
+                            <div class="portfolio-allocation">
+                                <div class="allocation-item">
+                                    <span class="allocation-percent">70%</span>
+                                    <span class="allocation-type">Stock Index Funds</span>
+                                    <span class="allocation-desc">Total Stock Market or S&P 500</span>
+                                </div>
+                                <div class="allocation-item">
+                                    <span class="allocation-percent">20%</span>
+                                    <span class="allocation-type">International Stocks</span>
+                                    <span class="allocation-desc">Developed + Emerging Markets</span>
+                                </div>
+                                <div class="allocation-item">
+                                    <span class="allocation-percent">10%</span>
+                                    <span class="allocation-type">Bonds</span>
+                                    <span class="allocation-desc">Total Bond Market Index</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Debt Management Section -->
+                <div class="education-section" id="debt">
+                    <h2><i class="fas fa-credit-card"></i> Smart Debt Management</h2>
+                    
+                    <div class="lesson-grid">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-snowflake"></i>
+                            </div>
+                            <h3>Debt Avalanche vs Snowball</h3>
+                            <p>Two proven strategies to eliminate debt faster</p>
+                            <div class="debt-strategies">
+                                <div class="strategy">
+                                    <h4>❄️ Debt Avalanche (Math Winner)</h4>
+                                    <ol>
+                                        <li>List all debts by interest rate (highest first)</li>
+                                        <li>Pay minimums on all debts</li>
+                                        <li>Put extra money toward highest rate debt</li>
+                                        <li>Repeat until debt-free</li>
+                                    </ol>
+                                    <p><strong>Best for:</strong> Saving the most money on interest</p>
+                                </div>
+                                <div class="strategy">
+                                    <h4>⚡ Debt Snowball (Motivation Winner)</h4>
+                                    <ol>
+                                        <li>List all debts by balance (smallest first)</li>
+                                        <li>Pay minimums on all debts</li>
+                                        <li>Put extra money toward smallest balance</li>
+                                        <li>Celebrate wins and build momentum</li>
+                                    </ol>
+                                    <p><strong>Best for:</strong> Staying motivated with quick wins</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Student Loan Strategy</h3>
+                            <p>Navigate student loans like a pro</p>
+                            <div class="loan-tips">
+                                <div class="tip-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Know your loan types (federal vs private)</span>
+                                </div>
+                                <div class="tip-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Explore income-driven repayment plans</span>
+                                </div>
+                                <div class="tip-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Consider Public Service Loan Forgiveness</span>
+                                </div>
+                                <div class="tip-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Pay extra toward highest interest loans</span>
+                                </div>
+                                <div class="tip-item">
+                                    <i class="fas fa-check"></i>
+                                    <span>Don't skip payments - explore deferment/forbearance</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Avoiding Debt Traps</h3>
+                            <p>Common pitfalls and how to avoid them</p>
+                            <div class="trap-list">
+                                <div class="trap-item">
+                                    <strong>Minimum Payment Trap:</strong> Only paying minimums keeps you in debt forever
+                                </div>
+                                <div class="trap-item">
+                                    <strong>Lifestyle Inflation:</strong> Spending more as income increases
+                                </div>
+                                <div class="trap-item">
+                                    <strong>Buy Now, Pay Later:</strong> Easy to overspend with delayed payments
+                                </div>
+                                <div class="trap-item">
+                                    <strong>Payday Loans:</strong> Extremely high interest rates (avoid at all costs)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Section -->
+                <div class="education-section" id="advanced">
+                    <h2><i class="fas fa-rocket"></i> Advanced Wealth Building</h2>
+                    
+                    <div class="lesson-grid">
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3>FIRE Movement</h3>
+                            <p>Financial Independence, Retire Early</p>
+                            <div class="fire-types">
+                                <div class="fire-type">
+                                    <strong>Lean FIRE:</strong> $1M saved, $40K/year expenses
+                                </div>
+                                <div class="fire-type">
+                                    <strong>Regular FIRE:</strong> $2.5M saved, $100K/year expenses
+                                </div>
+                                <div class="fire-type">
+                                    <strong>Fat FIRE:</strong> $5M+ saved, $200K+/year expenses
+                                </div>
+                            </div>
+                            <div class="fire-steps">
+                                <h4>Path to FIRE:</h4>
+                                <ol>
+                                    <li>Calculate your FIRE number (25x annual expenses)</li>
+                                    <li>Maximize savings rate (50%+ for early retirement)</li>
+                                    <li>Invest in low-cost index funds</li>
+                                    <li>Optimize taxes (401k, IRA, HSA)</li>
+                                    <li>Consider side hustles for extra income</li>
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3>Real Estate Investing</h3>
+                            <p>Building wealth through property</p>
+                            <div class="real-estate-options">
+                                <div class="re-option">
+                                    <strong>REITs:</strong> Real Estate Investment Trusts (easiest to start)
+                                </div>
+                                <div class="re-option">
+                                    <strong>House Hacking:</strong> Live in one unit, rent out others
+                                </div>
+                                <div class="re-option">
+                                    <strong>Rental Properties:</strong> Buy and hold for cash flow
+                                </div>
+                                <div class="re-option">
+                                    <strong>Real Estate Crowdfunding:</strong> Invest with less capital
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-card">
+                            <div class="lesson-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3>Side Hustles & Passive Income</h3>
+                            <p>Multiple income streams for faster wealth building</p>
+                            <div class="income-streams">
+                                <div class="stream-category">
+                                    <h4>Active Side Hustles:</h4>
+                                    <ul>
+                                        <li>Freelancing (writing, design, coding)</li>
+                                        <li>Tutoring or teaching online</li>
+                                        <li>Delivery driving (Uber, DoorDash)</li>
+                                        <li>Virtual assistant services</li>
+                                    </ul>
+                                </div>
+                                <div class="stream-category">
+                                    <h4>Passive Income Ideas:</h4>
+                                    <ul>
+                                        <li>Dividend-paying stocks</li>
+                                        <li>Create online courses</li>
+                                        <li>Affiliate marketing</li>
+                                        <li>Rent out spare room/parking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Plan -->
+                <div class="action-plan">
+                    <h2><i class="fas fa-rocket"></i> Your 30-Day Action Plan</h2>
+                    <div class="plan-timeline">
+                        <div class="plan-week">
+                            <h3>Week 1: Foundation</h3>
+                            <ul>
+                                <li>Track all expenses for one week</li>
+                                <li>Open high-yield savings account</li>
+                                <li>Set up automatic transfer to savings</li>
+                                <li>Check credit score (free on Credit Karma)</li>
+                            </ul>
+                        </div>
+                        <div class="plan-week">
+                            <h3>Week 2: Budget & Goals</h3>
+                            <ul>
+                                <li>Create your first budget using 50/30/20 rule</li>
+                                <li>Set 3 specific financial goals</li>
+                                <li>Research employer 401(k) match</li>
+                                <li>Cancel unused subscriptions</li>
+                            </ul>
+                        </div>
+                        <div class="plan-week">
+                            <h3>Week 3: Debt & Credit</h3>
+                            <ul>
+                                <li>List all debts with balances and rates</li>
+                                <li>Choose debt payoff strategy</li>
+                                <li>Set up credit card autopay</li>
+                                <li>Research student loan options</li>
+                            </ul>
+                        </div>
+                        <div class="plan-week">
+                            <h3>Week 4: Investing</h3>
+                            <ul>
+                                <li>Open investment account (Roth IRA)</li>
+                                <li>Make first investment in index fund</li>
+                                <li>Set up automatic investing</li>
+                                <li>Plan next month's financial priorities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FinGoal. Empowering Gen Z's Financial Future.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/education.js"></script>
+</body>
+</html>

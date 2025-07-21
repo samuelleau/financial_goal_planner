@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat - FinGoal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-chart-line"></i>
+                <span>FinGoal</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="chat.html" class="nav-link active">AI Chat</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="education.html" class="nav-link">Learn</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2><i class="fas fa-robot"></i> Your AI Financial Advisor</h2>
+                    <p>Get personalized financial advice tailored for YOU</p>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message ai">
+                        <div class="message-content">
+                            <strong>FinGoal AI:</strong> Hey there! 👋 I'm your personal AI financial advisor, here to help you navigate your financial journey. Whether you're looking to:
+                            <br><br>
+                            💰 Build an emergency fund<br>
+                            🎓 Pay off student loans<br>
+                            🏠 Save for a house down payment<br>
+                            📈 Start investing<br>
+                            💳 Manage credit card debt<br>
+                            <br>
+                            I'm here to help! What financial goal would you like to work on today?
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-container">
+                    <input 
+                        type="text" 
+                        id="chatInput" 
+                        class="chat-input" 
+                        placeholder="Ask me about your financial goals..."
+                        maxlength="500"
+                    >
+                    <button id="sendBtn" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- API Key Setup Modal -->
+            <div id="apiKeyModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3><i class="fas fa-key"></i> OpenAI API Setup</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>To use the AI chat feature, you need to provide your OpenAI API key. Your key will be stored locally in your browser and never sent to our servers.</p>
+                        <div class="form-group">
+                            <label for="apiKeyInput" class="form-label">OpenAI API Key:</label>
+                            <input type="password" id="apiKeyInput" class="form-input" placeholder="sk-...">
+                            <small style="color: #718096; font-size: 0.9rem;">
+                                Get your API key from <a href="https://platform.openai.com/api-keys" target="_blank" style="color: #667eea;">OpenAI Platform</a>
+                            </small>
+                        </div>
+                        <div class="modal-actions">
+                            <button id="saveApiKey" class="btn btn-primary">Save & Continue</button>
+                            <button id="skipApiKey" class="btn btn-secondary">Use Demo Mode</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <h3 style="color: white; text-align: center; margin-bottom: 2rem;">Quick Financial Topics</h3>
+                <div class="quick-actions-grid">
+                    <button class="quick-action-btn" data-prompt="Help me create a budget for someone earning $3000/month">
+                        <i class="fas fa-calculator"></i>
+                        <span>Create Budget</span>
+                    </button>
+                    <button class="quick-action-btn" data-prompt="I want to start investing but don't know where to begin. I'm 22 years old.">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Start Investing</span>
+                    </button>
+                    <button class="quick-action-btn" data-prompt="How much should I save for an emergency fund?">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Emergency Fund</span>
+                    </button>
+                    <button class="quick-action-btn" data-prompt="I have $5000 in credit card debt. What's the best strategy to pay it off?">
+                        <i class="fas fa-credit-card"></i>
+                        <span>Debt Strategy</span>
+                    </button>
+                    <button class="quick-action-btn" data-prompt="Help me plan for buying my first home in 5 years">
+                        <i class="fas fa-home"></i>
+                        <span>Home Buying</span>
+                    </button>
+                    <button class="quick-action-btn" data-prompt="What are the best ways to build credit as a young adult?">
+                        <i class="fas fa-star"></i>
+                        <span>Build Credit</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FinGoal. Empowering Gen Z's Financial Future.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/chat.js"></script>
+</body>
+</html>
