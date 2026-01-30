@@ -35,8 +35,17 @@ class FinGoalChat {
         document.getElementById('saveApiKey').addEventListener('click', () => this.saveApiKey());
         document.getElementById('skipApiKey').addEventListener('click', () => this.enableDemoMode());
 
-        // Quick action buttons
+        // Quick action buttons (legacy class name)
         document.querySelectorAll('.quick-action-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const prompt = e.currentTarget.dataset.prompt;
+                this.chatInput.value = prompt;
+                this.sendMessage();
+            });
+        });
+
+        // Quick topic buttons (new sidebar)
+        document.querySelectorAll('.quick-topic-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const prompt = e.currentTarget.dataset.prompt;
                 this.chatInput.value = prompt;

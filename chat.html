@@ -26,39 +26,73 @@
 
     <main class="main-content">
         <div class="container">
-            <div class="chat-container">
-                <div class="chat-header">
-                    <h2><i class="fas fa-robot"></i> Your AI Financial Advisor</h2>
-                    <p>Get personalized financial advice tailored for YOU</p>
-                </div>
-                
-                <div class="chat-messages" id="chatMessages">
-                    <div class="message ai">
-                        <div class="message-content">
-                            <strong>FinGoal AI:</strong> Hey there! 👋 I'm your personal AI financial advisor, here to help you navigate your financial journey. Whether you're looking to:
-                            <br><br>
-                            💰 Build an emergency fund<br>
-                            🎓 Pay off student loans<br>
-                            🏠 Save for a house down payment<br>
-                            📈 Start investing<br>
-                            💳 Manage credit card debt<br>
-                            <br>
-                            I'm here to help! What financial goal would you like to work on today?
+            <div class="chat-layout">
+                <!-- Main Chat Container -->
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h2><i class="fas fa-robot"></i> Your AI Financial Advisor</h2>
+                        <p>Get personalized financial advice tailored for YOU</p>
+                    </div>
+                    
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message ai">
+                            <div class="message-content">
+                                <strong>FinGoal AI:</strong> Hey there! 👋 I'm your personal AI financial advisor, here to help you navigate your financial journey. Whether you're looking to:
+                                <br><br>
+                                💰 Build an emergency fund<br>
+                                🎓 Pay off student loans<br>
+                                🏠 Save for a house down payment<br>
+                                📈 Start investing<br>
+                                💳 Manage credit card debt<br>
+                                <br>
+                                I'm here to help! What financial goal would you like to work on today?
+                            </div>
                         </div>
+                    </div>
+
+                    <div class="chat-input-container">
+                        <input 
+                            type="text" 
+                            id="chatInput" 
+                            class="chat-input" 
+                            placeholder="Ask me about your financial goals..."
+                            maxlength="500"
+                        >
+                        <button id="sendBtn" class="send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </div>
                 </div>
 
-                <div class="chat-input-container">
-                    <input 
-                        type="text" 
-                        id="chatInput" 
-                        class="chat-input" 
-                        placeholder="Ask me about your financial goals..."
-                        maxlength="500"
-                    >
-                    <button id="sendBtn" class="send-btn">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
+                <!-- Quick Topics Sidebar -->
+                <div class="quick-topics-sidebar">
+                    <h3 class="sidebar-title">Quick Topics</h3>
+                    <div class="quick-topics-list">
+                        <button class="quick-topic-btn" data-prompt="Help me create a budget for someone earning $3000/month">
+                            <i class="fas fa-calculator"></i>
+                            <span>Create Budget</span>
+                        </button>
+                        <button class="quick-topic-btn" data-prompt="I want to start investing but don't know where to begin. I'm 22 years old.">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Start Investing</span>
+                        </button>
+                        <button class="quick-topic-btn" data-prompt="How much should I save for an emergency fund?">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Emergency Fund</span>
+                        </button>
+                        <button class="quick-topic-btn" data-prompt="I have $5000 in credit card debt. What's the best strategy to pay it off?">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Debt Strategy</span>
+                        </button>
+                        <button class="quick-topic-btn" data-prompt="Help me plan for buying my first home in 5 years">
+                            <i class="fas fa-home"></i>
+                            <span>Home Buying</span>
+                        </button>
+                        <button class="quick-topic-btn" data-prompt="What are the best ways to build credit as a young adult?">
+                            <i class="fas fa-star"></i>
+                            <span>Build Credit</span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -82,37 +116,6 @@
                             <button id="skipApiKey" class="btn btn-secondary">Use Demo Mode</button>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Quick Actions -->
-            <div class="quick-actions">
-                <h3 style="color: white; text-align: center; margin-bottom: 2rem;">Quick Financial Topics</h3>
-                <div class="quick-actions-grid">
-                    <button class="quick-action-btn" data-prompt="Help me create a budget for someone earning $3000/month">
-                        <i class="fas fa-calculator"></i>
-                        <span>Create Budget</span>
-                    </button>
-                    <button class="quick-action-btn" data-prompt="I want to start investing but don't know where to begin. I'm 22 years old.">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Start Investing</span>
-                    </button>
-                    <button class="quick-action-btn" data-prompt="How much should I save for an emergency fund?">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Emergency Fund</span>
-                    </button>
-                    <button class="quick-action-btn" data-prompt="I have $5000 in credit card debt. What's the best strategy to pay it off?">
-                        <i class="fas fa-credit-card"></i>
-                        <span>Debt Strategy</span>
-                    </button>
-                    <button class="quick-action-btn" data-prompt="Help me plan for buying my first home in 5 years">
-                        <i class="fas fa-home"></i>
-                        <span>Home Buying</span>
-                    </button>
-                    <button class="quick-action-btn" data-prompt="What are the best ways to build credit as a young adult?">
-                        <i class="fas fa-star"></i>
-                        <span>Build Credit</span>
-                    </button>
                 </div>
             </div>
         </div>
