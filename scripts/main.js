@@ -54,34 +54,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Animate progress bars in floating cards
-    const progressBars = document.querySelectorAll('.progress');
-    progressBars.forEach(bar => {
-        const width = bar.style.width;
-        bar.style.width = '0%';
-        
-        setTimeout(() => {
-            bar.style.width = width;
-        }, 1000);
-    });
-
-    // Add typing effect to hero title
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const text = heroTitle.innerHTML;
-        heroTitle.innerHTML = '';
-        
+    // Typing Animation for Hero Title
+    const typingText = document.querySelector('.typing-text');
+    if (typingText) {
+        const fullText = 'Your AI-Powered Financial Future';
+        const gradientStartIndex = 16; // Start of "Financial Future"
         let i = 0;
+        
+        // Clear any existing text
+        typingText.innerHTML = '';
+        
         const typeWriter = () => {
-            if (i < text.length) {
-                heroTitle.innerHTML += text.charAt(i);
+            if (i < fullText.length) {
                 i++;
-                setTimeout(typeWriter, 50);
+                const typedText = fullText.substring(0, i);
+                
+                // Split text into regular and gradient parts
+                if (i <= gradientStartIndex) {
+                    typingText.innerHTML = typedText;
+                } else {
+                    const regularPart = fullText.substring(0, gradientStartIndex);
+                    const gradientPart = fullText.substring(gradientStartIndex, i);
+                    typingText.innerHTML = regularPart + '<span class="gradient-text">' + gradientPart + '</span>';
+                }
+                
+                setTimeout(typeWriter, 100);
             }
         };
         
+        // Start typing after a short delay
         setTimeout(typeWriter, 500);
     }
+
+
 
     // Mobile menu toggle (if needed in future)
     const navToggle = document.querySelector('.nav-toggle');

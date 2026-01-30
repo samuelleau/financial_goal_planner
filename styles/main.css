@@ -113,10 +113,24 @@ body {
 }
 
 .gradient-text {
-    background: linear-gradient(45deg, #ffd89b, #19547b);
+    background: linear-gradient(90deg, #ffd89b, #67197b, #ea66e3, #764ba2, #ffd89b);
+    background-size: 300% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: gradientShift 9s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .hero-subtitle {
